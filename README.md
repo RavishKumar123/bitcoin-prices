@@ -3,6 +3,9 @@
 Desktop
 ![plot](https://github.com/RavishKumar123/bitcoin-prices/blob/main/screenshots/Main.png)
 
+Mobile
+![plot](https://github.com/RavishKumar123/bitcoin-prices/blob/main/screenshots/mainMobile.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

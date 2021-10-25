@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-//Css Imports
+import React, { useState, useEffect } from "react";
+//Css Import
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
+// Services import
+import { getCurrentPrice } from "./services/dataService";
 
-//Components imports
+//Components import
 import Graph from "./components/graph/graph";
-//Bootstrap imports
+//Bootstrap import
 import Dropdown from "react-bootstrap/Dropdown";
 import Alert from "react-bootstrap/Alert";
 interface SelectedCurrency {
@@ -17,11 +19,29 @@ const App: React.FC = () => {
   const [currentprice, setcurrentprice] = useState<string>("00,000"); //state for current price
   const currencies: {
     [key: string]: string;
-  } = { USD: "$", EUR: "€", CNY: "元", JPY: "¥", PLN: "zł" }; //All avail currency types 
+  } = { USD: "$", EUR: "€", CNY: "元", JPY: "¥", PLN: "zł" }; //All avail currency types
   const [selectedcurrency, setselectedcurrency] = useState<SelectedCurrency>({
     name: "USD",
     symbol: "$",
   });
+  const fetchCurrentPrice = (): void => {
+    try {
+      getCurrentPrice(selectedcurrency.name)
+        .then((response) => {
+          const price: string = response.bpi[selectedcurrency.name].rate;
+          setcurrentprice(price);
+        })
+        .catch((err) => {
+          seterror(err.message);
+        });
+    } catch (e) {
+      seterror("An unknown error occured");
+    }
+  };
+  useEffect(() => {
+    fetchCurrentPrice();
+  }, [selectedcurrency]);
+
   return (
     <div className="app">
       <div className="app__errors h-50">

@@ -6,6 +6,8 @@ Desktop
 Mobile
 ![plot](https://github.com/RavishKumar123/bitcoin-prices/blob/main/screenshots/mainMobile.png)
 
+# If you get any error while executing command 'npm install' then please update your npm to latest version
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -73,9 +73,9 @@ const Graph: React.FC<Props> = ({ currency, onError }) => {
           }));
           setloading(false);
         })
-        .catch((errx) => {
+        .catch((err) => {
           setloading(false);
-          onError(errx.message);
+          onError(err.message);
         });
     } catch (e) {
       onError("An unknown error ocured");

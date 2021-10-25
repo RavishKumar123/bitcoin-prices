@@ -1,0 +1,53 @@
+.App {
+}
+
+.app__graph {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  /* display: flex; */
+  /* align-items: flex-end; */
+}
+
+.container {
+  margin-top: 15vh;
+}
+
+.app__price-container {
+  /* border: salmon 1px solid; */
+}
+
+.app__pricebox__inner {
+  /* width: 52%; */
+  margin: auto;
+}
+
+button#dropdown-basic {
+  background: #618b78;
+  border: 0px;
+  outline: none;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background: #618b78 !important;
+}
+.price__font-style {
+  font-family: "Saira Condensed", sans-serif;
+  font-family: "Urbanist", sans-serif;
+  transition: all 0.3s;
+  font-size: 3rem;
+}
+span.price__symbol {
+  font-weight: bold;
+  /* font-size: 3rem; */
+  margin: 6px;
+}
+
+.app__pricebox__inner {
+  border-bottom: 6px dashed #bcd8b5;
+  box-shadow: 1px 10px 27px 9px lightgrey;
+  border-top-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  padding: 10px 0px 10px 0px;
+}

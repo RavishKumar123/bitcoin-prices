@@ -22,7 +22,7 @@ const CurrentPrice: React.FC<Props> = ({
   const [currentprice, setcurrentprice] = useState<string>("00,000"); //state for current price
   const currencies: {
     [key: string]: string;
-  } = { USD: "$", EUR: "€", CNY: "元", JPY: "¥", PLN: "zł" }; //All avail currency types
+  } = { USD: "$", EUR: "€", CNY: "元", JPY: "¥", PLN: "zł" }; //All available currency types
   const fetchCurrentPrice = (): void => {
     try {
       getCurrentPrice(selectedCurrency.name)
@@ -45,13 +45,13 @@ const CurrentPrice: React.FC<Props> = ({
     <div className="app__pricebox container">
       <div className="app__pricebox__inner">
         <div className="app__pricebox__row row">
-          <div className="app__price-container col-md-7 d-flex justify-content-lg-end  justify-content-sm-center justify-content-center justify-content-md-end align-items-center ">
+          <div className="app__price-container col-md-8 d-flex justify-content-lg-end  justify-content-sm-center justify-content-center justify-content-md-end align-items-center ">
             <h1 className="text-right price__font-style">
               <span className="price__symbol">{selectedCurrency.symbol}</span>
               <span data-testid="priceSpan">{currentprice}</span>
             </h1>
           </div>
-          <div className="app__currency-selector col-md-5 d-flex justify-content-lg-start  justify-content-sm-center justify-content-center justify-content-md-start align-items-center ">
+          <div className="app__currency-selector col-md-4 d-flex justify-content-lg-start  justify-content-sm-center justify-content-center justify-content-md-start align-items-center ">
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 {selectedCurrency.name}

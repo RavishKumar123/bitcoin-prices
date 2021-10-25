@@ -36,7 +36,7 @@ button#dropdown-basic {
   font-family: "Saira Condensed", sans-serif;
   font-family: "Urbanist", sans-serif;
   transition: all 0.3s;
-  font-size: 3rem;
+  font-size: 5vw;
 }
 span.price__symbol {
   font-weight: bold;
@@ -50,4 +50,23 @@ span.price__symbol {
   border-top-left-radius: 22px;
   border-bottom-right-radius: 22px;
   padding: 10px 0px 10px 0px;
+}
+
+@media (min-width: 100px) and (max-width: 480px) {
+  .container {
+    margin-top: 2vh;
+  }
+  .price__font-style {
+    font-size: 10vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS */
+  .container {
+    margin-top: 2vh;
+  }
+  .price__font-style {
+    font-size: 10vw;
+  }
 }

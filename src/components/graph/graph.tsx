@@ -36,7 +36,7 @@ const Graph: React.FC<Props> = ({ currency, onError }) => {
       },
     },
     tooltip: {
-      enabled: false,
+      enabled: true,
     },
     yaxis: {
       show: false,
@@ -89,7 +89,7 @@ const Graph: React.FC<Props> = ({ currency, onError }) => {
       {!loading && (
         <Chart
           options={options}
-          series={[{ data: series }]}
+          series={[{ data: series,name:"Bitcoin Price" }]}
           height={"100%"}
           type="area"
         />
